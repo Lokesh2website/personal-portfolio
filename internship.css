@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    
+  }
+.internships{
+    max-width: 100%;
+    max-height: 100%;
+   
+}
+.internships .itc{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.internships .itc .top{
+    display: flex;
+    flex-direction: row;
+    margin: 14px;
+}
+.internships .itc .details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(49, 47, 162);
+    padding-top: 12px;
+    padding-left: 5px;
+}
+.internships .itc img{
+    background-color: white;
+}
+.internships .itc .title1{
+    color: white;
+    font-size: 35px;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.internships .itc .Role1{
+    color: white;
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+.internships .itc .Duration1{
+    color: white;
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+/* Style the bullet points */
+.bullet-list {
+    list-style-type: disc; /* This sets the bullet point style (can also use circle, square, etc.) */
+    margin-left: 20px; /* Add some margin to push the list to the right */
+    padding: 15px;
+}
+
+/* Style the list items (optional) */
+.bullet-list li {
+    color: #ffffff;
+    padding: 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+.internships .itc .skills{
+    color: white;
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 13px;
+    text-align: center;
+}
+.internships .itc .skills a{
+    color: red;
+   
+}
+.button1{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid #33ff00;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  margin: 13px auto;
+  font-weight: bold;
+  }
+.button1:hover {
+    border: 2px solid #33ff00;
+    background: #33ff00;
+    transition: 0.3s;
+  }
+.subtitle{
+    font-size: 21px;
+}
