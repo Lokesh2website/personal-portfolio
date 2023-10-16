@@ -34,19 +34,113 @@
     max-height: 70%; 
     object-fit: cover;
   }
-header {
-    height: 100px; 
+  header {
+    height: 100px;
     background: white;
     width: 100%;
-    z-index: 9999;
+    z-index: 1;
     position: fixed;
     top: 0;
     box-shadow: 0px 2px 4px rgba(54, 53, 53, 0.2);
 }
+
 .Header {
     width: 93%;
     margin: auto;
 }
+
+.navbar {
+    width: 100%;
+    height: 100px;
+}
+
+.nav-branding {
+    font-size: 25px;
+    color: black;
+}
+
+.nav-menu {
+    display: flex;
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 35px;
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.nav-menu li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0d00ff;
+    margin: auto;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+/* Original CSS styles */
+
+/* Styles for screens with a width of 600px or less */
+/* Original CSS styles */
+
+/* Styles for screens with a width of 600px or less */
+/* Original CSS styles */
+
+/* Styles for screens with a width of 600px or less */
+@media screen and (max-width: 600px) {
+  body{
+    overflow-x: hidden ;
+  }
+  header {
+    width: 100%;
+      height: 80px; /* Adjust height as needed for smaller screens */
+      position: fixed;
+      z-index: 1;
+  }
+
+  .nav-branding {
+      display: block; /* Ensure the branding is visible */
+      text-align: center; /* Center-align the branding */
+  }
+
+  .nav-menu {
+      display: flex;
+      flex-direction: column; /* Stack navigation items vertically */
+      align-items: center; /* Center-align navigation items */
+  }
+
+  .nav-menu li {
+      margin: 0; /* Remove right margin for list items */
+      margin-bottom: 10px; /* Add space between list items */
+  }
+
+  .nav-menu li:last-child {
+      margin-bottom: 0; /* No space after the last list item */
+  }
+
+  .nav-menu li a {
+      margin-right: 0; /* Remove right margin for anchor links */
+  }
+}
+
 .header {
     height: 1080px;
     width: 100%;
@@ -61,56 +155,7 @@ header {
     display: flex;
     align-items: center;
   }
-.navbar {
-    width: 100%;
-    margin: auto;
-    height: 100px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-links {
-    display: flex;
-    text-align: right;
-    margin-top: 10px;
-}
 
-.nav-branding {
-    font-size: 25px;
-    color: black;
-}
-
-.nav-menu {
-    display: flex;
-    height: 100%; /* Set the desired height for the menu */
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 16px;
-}
-.nav-menu li{
-    display: flex;
-    gap: 35px;
-    font-size: 16px;
- }
-.nav-menu li a{
-    margin-right: 35px;
-    text-decoration: none;
-    color: black;
-}
-.nav-menu li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #fff765;
-    display: block;
-    margin: auto;
-    transition: 0.3s;
-}
-
-.nav-menu li a:hover::after {
-    width: 100%;
-}
 .heading {
     width: 90%;
     color: white;
@@ -131,62 +176,51 @@ header {
   color: rgb(246, 255, 0);
   font-weight: bold;
 }
+
+
 .section2{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center vertically */
 
 }
+.links {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 10%;
+}
 .KMM {
+  display: flex;
+  flex-direction: row;
   margin-top: -20px;
-  text-align: left;
-  margin-left: -140%;
+  align-items: start;
   font-size: 30px;
 }
 
-.linkedin {
+.linkedin, .resume1 {
   display: flex;
-  align-items: left; /* Vertical centering */
+  align-items: center;
+  margin: 10px; /* Adjust the margin as needed */
 }
+
+/* Additional styles for LinkedIn and Resume links */
 .linkedin img {
   width: 70px;
   height: 70px;
-  margin-left: -135%; /* Adjust this value as needed */
-  margin-top: 9%;
-}
-.linkedin a {
-  color: black;
-  font-size: 20px;
-  background-color: white;
-  margin-left: 19px;
-  margin-top: 14%;
 }
 
-
-.resume1 {
-  display: flex;
-  align-items: left; /* Vertical centering */
-}
 .resume1 img {
   width: 70px;
   height: 80px;
-  margin-left: -10%; /* Adjust this value as needed */
-  margin-top: -24%;
 }
-.resume1 a {
+
+.resume-link {
   color: black;
   font-size: 20px;
   background-color: white;
-  margin-left: 19px;
-  margin-top: -17%;
+  margin-left: 10px; /* Adjust as needed */
 }
-.line1 {
-  border-left: 3px solid rgb(0, 0, 0);
-  height: 110px;
-  position: absolute;
-  left: 60%;
-  margin-left: -90%;
-  top: 33%;
-}
-
 
 .about {
   max-height: 100%;
@@ -198,7 +232,7 @@ header {
   left: 0;
   display: flex;
   align-items: center;
-  margin: 1vh auto 25vh auto;
+  margin: 3% auto 5% auto;
 
 }
 
@@ -263,13 +297,13 @@ header {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 5rem;
+  scroll-padding: 7rem;
 }
 
 .left-column {
   /* Adjust margin or padding as needed */
   padding-left: 48%; /* Adjust the padding-left value */
-  margin-top: 6%;
+  padding-top: 10%;
   margin-bottom: auto;
 }
 .left-column .aboutMeImage img {
@@ -282,7 +316,7 @@ html {
   display: flex;
   justify-content: space-between;
  flex-wrap: wrap;
- padding-bottom: 30px;
+ padding-bottom: 10px;
 }
 .container .card1{
   position: relative;
@@ -382,34 +416,31 @@ html {
   transition: 0.3s;
 }
 .helphub{
-  max-width: 100%;
-  max-height: 100%;
- 
+  width: 100%;
+  margin-top: 3%;
+}
+.desc{
+text-align: center;
 }
 .title-hh{
 text-align: center;
 font-size: 30px;
 }
-.subtitle-hh{
-  text-align: center;
-  font-size: 25px;
-}
+
 .container-hh{
 width: 100%;
-height: 100vh;
 display: flex;
-align-items: center;
 justify-content: center;
+padding-bottom: 2%;
 }
 form{
   background: black;
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 10px;
-
 }
 form input, form textarea{
     border: 0;
@@ -431,4 +462,72 @@ form button{
   position: relative;
   cursor: pointer;
   outline: none;
+}
+.contact{
+  position: relative;
+  width: 100%;
+  padding: 20px 100px;
+  background-color: #181772;
+  height: 100%;
+}
+.contact .content{
+  max-width: 100%;
+  text-align: center;
+}
+.contact .content h1{
+font-size: 27px;
+font-weight: 500;
+color: white;
+}
+.contact .content p{
+font-weight: 200;
+color: white;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+.info .contactInfo {
+  width: fit-content;
+  display: flex;
+}
+
+.info .contactInfo .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.info .contactInfo .details .icons {
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  background: none;
+}
+
+.info .contactInfo .details .text {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: white;
+  justify-content: center;
+}
+
+.info .contactInfo .details .text h3 {
+  font-weight: 500;
+  color: #959090;
+}
+
+.info .contactInfo .details .text a {
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.info .contactInfo a {
+  color: white;
 }
